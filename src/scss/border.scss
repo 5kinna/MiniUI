@@ -1,0 +1,32 @@
+.b-line{
+  position: relative;
+}
+
+.b-line::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #e5e5e5;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.b-line::before{
+  border-bottom-width: 1px;
+}
+
+.br3 {
+  border-radius: 6rpx;
+
+  &::before,
+  &::after {
+    border-radius: 12rpx;
+  }
+}

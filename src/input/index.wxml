@@ -1,0 +1,23 @@
+<view class="__input b-line mini-com">
+  <input
+    class="__input-main"
+    value="{{value}}"
+    type="{{type}}"
+    password="{{password}}"
+    placeholder="{{placeholder}}"
+    placeholder-style="{{placeStyle}}"
+    placeholder-class="place-class {{placeClass}}"
+    disabled="{{disabled}}"
+    maxlength="{{maxlength}}"
+    cursor-spacing="{{cursorSpacing}}"
+    focus="{{focus}}"
+    cursor="{{cursor}}"
+    selection-start="{{selectionStart}}"
+    selection-end="{{selectionEnd}}"
+    adjust-position="{{adjustPosition}}"
+    bindinput="onInput"/>
+  <view class="__input-clear" bindtap="onClear" wx:if="{{ clear && !disabled && value && value.length > 0 }}">
+    <icon type="lock" color="#B2B2B2" size="28" />
+  </view>
+  <slot name="suffix"></slot>
+</view>

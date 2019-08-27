@@ -1,0 +1,4 @@
+
+<view class="__tabbar-{{position}} mini-com" style="{{style}}">
+  <slot></slot>
+</view>

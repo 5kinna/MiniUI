@@ -1,0 +1,31 @@
+<!-- 图片组件 -->
+<view class="__image" style="{{ style }}" bindtap="onTap">
+	<view class="__image-inner" wx:show="{{ status === 'loaded' }}">
+    <image class="__image-img" 
+           style="{{ style }}" 
+           lazy-load="{{ lazyLoad }}" 
+           mode="{{ mode }}" 
+           src="{{ src }}" 
+           bindload="onLoad" 
+           binderror="onError" />
+    <slot></slot>
+  </view>
+	<view class="__image-mask" wx:if="{{ status === 'empty' }}">
+    <view class="__image-empty" wx:if="{{ empty }}">暂无图片</view>
+    <block wx:else>
+      <slot name="empty"></slot>
+    </block>
+  </view>
+  <view class="__image-mask" wx:elif="{{ status === 'loading' }}">
+    <view class="__image-loading" wx:if="{{ loading }}"></view>
+    <block wx:else>
+      <slot name="loading"></slot>
+    </block>
+  </view>
+  <view class="__image-mask" wx:elif="{{ status === 'error' }}">
+    <view class="__image-error" wx:if="{{ error }}">图片异常</view>
+    <block wx:else>
+      <slot name="error"></slot>
+    </block>
+  </view>
+</view>

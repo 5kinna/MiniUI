@@ -1,0 +1,20 @@
+@import '../scss/border.scss';
+@import '../scss/variable.scss';
+.__input{
+  width: 100%;
+  height: 72rpx;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-main{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    .place-class{
+      color:$color-font-sub;
+      font-size: $size-font-primary; 
+      font-size: 400;
+    }
+  }
+}
