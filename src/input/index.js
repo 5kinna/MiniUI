@@ -1,8 +1,6 @@
-import bindData from '../../utils/bindData'
 
 Component({
   externalClasses:['mini-com'],
-  behaviors: [bindData],
   options: {
     multipleSlots: true 
   },

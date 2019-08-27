@@ -1,4 +1,4 @@
-import { checkIPhoneX, safeAreaInset } from '../../utils/checkIpx'
+import { checkIPhoneX, safeAreaInset } from '../utils/checkIphonex'
 const app = getApp()
 
 Component({
