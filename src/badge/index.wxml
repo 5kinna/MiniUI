@@ -1,0 +1,7 @@
+<view class="badge">
+  <slot></slot>
+  <block wx:if="{{!disable}}">
+    <view wx:if="{{dot}}" class="badge-dot my-badge"></view>
+    <view wx:else class="badge-text my-badge">{{count>over?over+'+':count}}</view>
+  </block>
+</view>

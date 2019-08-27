@@ -1,0 +1,25 @@
+.badge {
+  position: relative;
+}
+
+.badge-text {
+  position: absolute;
+  right: 20rpx;
+  top: 7rpx;
+  transform: translateX(100%) translateY(-50%);
+  border-radius: 20px;
+  padding: 4rpx 8rpx;
+  font-size: 20rpx;
+  color: #fff;
+  background: #f12c20;
+}
+
+.badge-dot {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f12c20;
+}
