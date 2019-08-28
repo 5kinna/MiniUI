@@ -1,0 +1,4 @@
+<view class="tag-{{size}}" hover-class="" style="{{ tagStyle }}" bindtap="onClick">
+    <view class="tag-txt"><slot></slot></view>
+    <view class="" catchtap="onClose" wx:if="{{ closable }}"></view>
+</view>

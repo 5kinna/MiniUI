@@ -26,32 +26,12 @@ export const wxml = () => (
     gulp
     .src(paths.wxmlSrc)
     .pipe(preprocess({context:context[ENV]}))
-    .pipe(
-        htmlmin({
-          collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeComments: true,
-          removeEmptyAttributes: true,
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true
-        })
-    )
     .pipe(gulp.dest(buildPath))
 )
 export const wxmlPage = () => (
     gulp
     .src(templates.wxmlSrc)
     .pipe(preprocess({context:context[ENV]}))
-    .pipe(
-        htmlmin({
-          collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeComments: true,
-          removeEmptyAttributes: true,
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true
-        })
-    )
     .pipe(gulp.dest(pageBuildPath))
 )
 
