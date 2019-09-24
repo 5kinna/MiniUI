@@ -1,0 +1,12 @@
+<view class="item" data-text="显示点">
+  <d-badge dot></d-badge>
+</view>
+<view class="item" data-text="显示数字">
+  <d-badge count="5"></d-badge>
+</view>
+<view class="item" data-text="显示阈值数字">
+  <d-badge></d-badge>
+</view>
+<view class="item" data-text="不可编辑">
+  <d-badge disable></d-badge>
+</view>

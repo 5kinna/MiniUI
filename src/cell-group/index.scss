@@ -1,0 +1,13 @@
+@import '../style/mixin.scss';
+.__cell-group {
+  &-title {
+    padding: 20rpx 40rpx;
+  }
+  &-main {
+    @include line();
+    &::before {
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+    }
+  }
+}

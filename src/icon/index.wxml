@@ -1,1 +1,1 @@
-<view class="iconfont icon-{{type}} mini-com" style="font-size:{{size}}rpx;color:{{color}};"></view>
+<view class="iconfont icon-{{type}} mini-clz" style="{{style}}"></view>

@@ -1,5 +1,5 @@
-Component({
-  externalClasses: ['my-badge'],
+import BaseComponent from '../utils/baseComponent'
+BaseComponent({
   properties: {
     count: {
       type: Number,

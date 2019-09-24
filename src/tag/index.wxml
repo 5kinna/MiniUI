@@ -1,4 +1,4 @@
-<view class="tag-{{size}}" hover-class="" style="{{ tagStyle }}" bindtap="onClick">
-    <view class="tag-txt"><slot></slot></view>
-    <view class="" catchtap="onClose" wx:if="{{ closable }}"></view>
+<view class="__tag-{{size}}" hover-class="" style="{{ tagStyle }}" bindtap="onClick">
+    <view class="__tag-txt"><slot></slot></view>
+    <d-icon type="delete" size="32" catchtap="onClose" wx:if="{{ closable }}"></d-icon>
 </view>

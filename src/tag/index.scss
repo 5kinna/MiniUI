@@ -1,12 +1,11 @@
-.tag-mini{
-  padding: 0 20rpx;
-  height: 36rpx;
-  border-radius: 18rpx;
-  font-size: 20rpx;
-  line-height: 36rpx;
-  text-align: center;
-  display: inline-block;
-}
-.tag-txt{
-  opacity: 1;
+.__tag{
+  &-mini{
+    padding: 0 20rpx;
+    height: 36rpx;
+    border-radius: 18rpx;
+    font-size: 20rpx;
+    line-height: 36rpx;
+    text-align: center;
+    display: inline-block;
+  }
 }

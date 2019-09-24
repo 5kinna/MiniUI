@@ -1,16 +1,11 @@
 <!-- 图片组件 -->
 <view class="__image" style="{{ style }}" bindtap="onTap">
-	<view class="__image-inner" wx:show="{{ status === 'loaded' }}">
-    <image class="__image-img" 
-           style="{{ style }}" 
-           lazy-load="{{ lazyLoad }}" 
-           mode="{{ mode }}" 
-           src="{{ src }}" 
-           bindload="onLoad" 
-           binderror="onError" />
+  <view class="__image-inner" wx:show="{{ status === 'loaded' }}">
+    <image class="__image-img" style="{{ style }}" lazy-load="{{ lazyLoad }}" mode="{{ mode }}" src="{{ src }}" bindload="onLoad"
+      binderror="onError" wx:if="{{src}}" />
     <slot></slot>
   </view>
-	<view class="__image-mask" wx:if="{{ status === 'empty' }}">
+  <view class="__image-mask" wx:if="{{ status === 'empty' }}">
     <view class="__image-empty" wx:if="{{ empty }}">暂无图片</view>
     <block wx:else>
       <slot name="empty"></slot>

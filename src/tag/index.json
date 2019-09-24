@@ -3,6 +3,6 @@
   "component": true,
   
   "usingComponents": {
-    
+    "d-icon":"../icon/index"
   }
 }

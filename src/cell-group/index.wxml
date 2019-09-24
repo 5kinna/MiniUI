@@ -1,0 +1,6 @@
+<view class="__cell-group">
+  <view class="__cell-group-title">{{title}}</view>
+  <view class="__cell-group-main">
+    <slot></slot>
+  </view>
+</view>

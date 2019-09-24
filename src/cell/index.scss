@@ -1,0 +1,41 @@
+@import '../style/mixin.scss';
+.__cell {
+  padding: 32rpx 40rpx 30rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-main {
+    flex: 1;
+    .title {
+      font-size: 34rpx;
+      line-height: 48rpx;
+      color: #000;
+      margin-bottom: 4rpx;
+    }
+    .label {
+      font-size: 28rpx;
+      font-weight: 400;
+      color: #888;
+      line-height: 40rpx;
+    }
+  }
+  &-tip {
+    color: #888;
+    display: flex;
+    &>view {
+      margin-right: 40rpx;
+    }
+    .right-tip {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &-bline {
+    @include bline();
+    &::before {
+      left: 40rpx;
+    }
+  }
+}

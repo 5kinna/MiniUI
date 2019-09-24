@@ -1,0 +1,8 @@
+{
+
+  "navigationBarTitleText": "",
+
+  "usingComponents": {
+    "d-image": "/dist/image/index"
+  }
+}

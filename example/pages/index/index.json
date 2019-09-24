@@ -1,0 +1,9 @@
+{
+
+  "navigationBarTitleText": "",
+
+  "usingComponents": {
+    "d-cell-group": "/dist/cell-group/index",
+    "d-cell": "/dist/cell/index"
+  }
+}
