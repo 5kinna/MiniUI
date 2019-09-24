@@ -3,31 +3,28 @@ BaseComponent({
   properties: {
     color: {
       type: String,
-      value: '',
-      observer: 'updateStyle'
+      value: '72,153,255',
     },
-    size: {
+    textColor: {
       type: String,
-      value: 'mini'
+      value: '',
     },
     closable: {
       type: Boolean,
       value: false
     }
   },
-  data: {
-    tagStyle: ''
+  computed: {
+    style: ['color,textColor', (color, textColor) => {
+      return `background: rgba(${color},.15); color: rgba(${textColor||color},1);`
+    }]
   },
   methods: {
     onClick() {
       this.triggerEvent('click')
     },
-    updateStyle(color) {
-      const tagStyle = `background: rgba(${color},.15); color: rgba(${color},1);`
-
-      this.setData({
-        tagStyle,
-      })
-    },
+    onClose() {
+      this.triggerEvent('close')
+    }
   }
 })

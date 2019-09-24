@@ -5,15 +5,4 @@ page {
 .item {
   width: 200rpx;
   height: 200rpx;
-  margin: 60rpx 20rpx;
-  position: relative;
-  &::before {
-    content: attr(data-text);
-    position: absolute;
-    top: -42rpx;
-    left: 0;
-    color: #aaa;
-    font-size: 26rpx;
-    min-width: 300rpx;
-  }
 }

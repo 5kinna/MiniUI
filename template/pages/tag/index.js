@@ -2,7 +2,11 @@ const app = getApp()
 
 Page({
   data: {
+    isShow: true
   },
-  onLoad() {
+  removeTag() {
+    this.setData({
+      isShow: false
+    })
   }
 })

@@ -9,3 +9,17 @@ scroll-view {
   height: 100%;
   box-sizing: border-box;
 }
+
+.item {
+  margin: 60rpx 20rpx;
+  position: relative;
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    top: -42rpx;
+    left: 0;
+    color: #aaa;
+    font-size: 26rpx;
+    min-width: 300rpx;
+  }
+}

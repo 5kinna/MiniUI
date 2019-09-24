@@ -1,1 +1,1 @@
-page{font-size:28rpx;background-color:#f4f4f4;font-family:PingFangSC;font-size:400}scroll-view{height:100%;box-sizing:border-box}
+page{font-size:28rpx;background-color:#f4f4f4;font-family:PingFangSC;font-size:400}scroll-view{height:100%;box-sizing:border-box}.item{margin:60rpx 20rpx;position:relative}.item::before{content:attr(data-text);position:absolute;top:-42rpx;left:0;color:#aaa;font-size:26rpx;min-width:300rpx}

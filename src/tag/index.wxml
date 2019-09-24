@@ -1,4 +1,6 @@
-<view class="__tag-{{size}}" hover-class="" style="{{ tagStyle }}" bindtap="onClick">
-    <view class="__tag-txt"><slot></slot></view>
-    <d-icon type="delete" size="32" catchtap="onClose" wx:if="{{ closable }}"></d-icon>
+<view class="__tag {{closable?'__tag-closable':''}} mini-clz" hover-class="" style="{{ style }}" bindtap="onClick">
+    <view class="__tag-txt">
+        <slot></slot>
+    </view>
+    <d-icon type="delete" size="32" catchtap="onClose" wx:if="{{ closable }}" mini-clz="__tag-close"></d-icon>
 </view>

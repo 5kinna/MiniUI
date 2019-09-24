@@ -28,17 +28,21 @@ BaseComponent({
             value: 225,
         },
         empty: {
-            type: Boolean,
-            value: true,
+            type: String,
+            value: '暂无图片',
         },
         loading: {
             type: Boolean,
             value: true,
         },
         error: {
-            type: Boolean,
-            value: true,
+            type: String,
+            value: '图片异常',
         },
+        type: {
+            type: String,
+            value: 'normal'
+        }
     },
     data: {
         status: '',

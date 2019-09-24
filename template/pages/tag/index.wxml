@@ -1,2 +1,9 @@
-<view>基础</view>
-<d-tag>标签</d-tag>
+<view class="item" data-text="基本使用">
+  <d-tag>标签</d-tag>
+</view>
+<view class="item" data-text="颜色">
+  <d-tag color="255,199,52">颜色</d-tag>
+</view>
+<view class="item" data-text="删除图标" wx:if="{{isShow}}">
+  <d-tag closable bind:click="removeTag">可删除</d-tag>
+</view>

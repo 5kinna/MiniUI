@@ -1,11 +1,21 @@
-.__tag{
-  &-mini{
-    padding: 0 20rpx;
-    height: 36rpx;
-    border-radius: 18rpx;
-    font-size: 20rpx;
-    line-height: 36rpx;
-    text-align: center;
-    display: inline-block;
-  }
+.__tag {
+  padding: 0 20rpx;
+  height: 36rpx;
+  border-radius: 18rpx;
+  font-size: 20rpx;
+  line-height: 36rpx;
+  text-align: center;
+  display: inline-block;
+}
+
+.__tag-close {
+  position: absolute;
+  right: 14rpx;
+  bottom: 0;
+  font-size: 12rpx !important;
+}
+
+.__tag-closable {
+  position: relative;
+  padding: 0 30rpx 0 20rpx;
 }
