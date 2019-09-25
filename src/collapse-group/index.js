@@ -8,7 +8,8 @@ BaseComponent({
   properties: {
     active: {
       type: [String, Number],
-      value: ''
+      value: '',
+      observer: 'updated'
     },
     // 是否是手风琴模式
     accordion: {
@@ -17,30 +18,31 @@ BaseComponent({
     }
   },
   data: {
-    childNodes: null
+    activeKey: ''
   },
   methods: {
-    _getAllCollapse() {
-      const collapses = this.getRelationNodes('../collapse/index')
-      collapses.forEach((i, index) => {
-        i.properties.name = i.properties.name || index
-      })
-      this.setData({
-        childNodes: collapses
-      })
-    },
-    resetActive(activeName) {
+    changeCurrent(activeKey) {
       const {
-        childNodes,
         accordion
       } = this.data
-      if (!accordion) return
-      childNodes.map(item => {
-        console.log('----', item)
+      const collapses = this.getRelationNodes('../collapse/index')
+      if (!collapses.length || !accordion) return
+      collapses.forEach((ele, index) => {
+        ele.changeCurrent(index === activeKey, ele.data.name || index)
+      })
+      this.emitEvent(activeKey)
+    },
+    emitEvent(key) {
+      this.triggerEvent('change', {
+        key
+      })
+    },
+    updated(activeKey = this.data.activeKey) {
+      if (this.data.activeKey === activeKey) return
+      this.changeCurrent(activeKey)
+      this.setData({
+        activeKey
       })
     }
-  },
-  ready: function () {
-    this._getAllCollapse()
   }
 })

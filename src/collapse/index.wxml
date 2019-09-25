@@ -1,11 +1,14 @@
 <view class="__collapse">
-  <view capture-catch:tap="changeHandle">
-    <view wx:if="{{title}}" class="__collapse-title">{{title}}</view>
+  <view capture-catch:tap="changeHandle" class="{{active?'__collapse-top':''}}">
+    <view wx:if="{{title}}" class="__collapse-title">
+      <view class="text">{{title}}</view>
+      <d-icon type="down" size="32" mini-clz="__collapse-down"></d-icon>
+    </view>
     <block wx:else>
       <slot name="title"></slot>
     </block>
   </view>
-  <block wx:if="{{isShow}}">
+  <block wx:if="{{active}}">
     <slot></slot>
   </block>
 </view>

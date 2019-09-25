@@ -17,36 +17,39 @@ BaseComponent({
     title: {
       type: String,
       value: ''
+    },
+    disabled: {
+      type: Boolean,
+      value: false
     }
   },
   data: {
-    parentNode: null
+    index: 0
   },
   computed: {
-    isShow: ['show', (show) => show]
+    active: ['show', (show) => show]
   },
   methods: {
-    _initParentNode() {
-      const nodes = this.getRelationNodes('../collapse-group/index')
-      if (!nodes.length) return null
-      return nodes[0]
-    },
     changeHandle() {
       const {
-        isShow,
-        parentNode,
-        name
+        active,
+        index
       } = this.data
-      if (!isShow && parentNode) parentNode.resetActive(name)
+      const nodes = this.getRelationNodes('../collapse-group/index')[0]
       this.setData({
-        isShow
+        active: !active
+      })
+      if (nodes && nodes.data.accordion && !active) nodes.changeCurrent(index)
+      this.triggerEvent('click', {
+        index
+      })
+    },
+    changeCurrent(active, index) {
+      this.setData({
+        active,
+        index
       })
     }
   },
-  ready() {
-    const parent = this._initParentNode()
-    this.setData({
-      parentNode: parent
-    })
-  }
+  ready() {}
 })

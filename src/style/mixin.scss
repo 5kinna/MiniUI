@@ -18,18 +18,16 @@
   }
 }
 
-@mixin tline($color:$color-boder, $left:0) {
+@mixin tline($color:$color-boder) {
   @include line($color);
   &::before {
-    left: $left;
     border-top-width: 1px;
   }
 }
 
-@mixin bline($color:$color-boder, $left:0) {
+@mixin bline($color:$color-boder) {
   @include line($color);
   &::before {
-    left: $left;
     border-bottom-width: 1px;
   }
 }

@@ -29,10 +29,11 @@ BaseComponent({
 
       if (disabled || !parent) return
 
+      parent.setActiveTabbar(index)
+
       this.triggerEvent('click', {
         index
       })
-      parent.setActiveTabbar(index)
     },
     changeCurrent(active, index) {
       this.setData({

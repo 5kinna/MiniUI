@@ -1,1 +1,1 @@
-.item{margin-left:0;margin-right:0}.item::before{left:20rpx}
+.item{margin-left:0;margin-right:0}.item::before{left:20rpx}.collapse-main{padding:20rpx 30rpx}

@@ -1,32 +1,44 @@
 <view class="item" data-text="非手风琴模式">
   <d-collapse-group>
     <d-collapse title="一致性">
-      <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
-      <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
+    </d-collapse>
+    <d-collapse title="一致性一致性一致性一致性一致性一致性一致性一致性一致性">
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
     </d-collapse>
     <d-collapse title="一致性">
-      <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
-      <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
-    </d-collapse>
-    <d-collapse title="一致性">
-      <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
-      <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
     </d-collapse>
   </d-collapse-group>
 </view>
 <view class="item" data-text="手风琴模式">
-  <d-collapse-group>
+  <d-collapse-group accordion="{{true}}">
     <d-collapse title="一致性">
-      <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
-      <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
     </d-collapse>
     <d-collapse title="一致性">
-      <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
-      <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
     </d-collapse>
     <d-collapse title="一致性">
-      <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
-      <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
     </d-collapse>
   </d-collapse-group>
 </view>
