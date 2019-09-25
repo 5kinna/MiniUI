@@ -1,0 +1,11 @@
+<view class="__collapse">
+  <view capture-catch:tap="changeHandle">
+    <view wx:if="{{title}}" class="__collapse-title">{{title}}</view>
+    <block wx:else>
+      <slot name="title"></slot>
+    </block>
+  </view>
+  <block wx:if="{{isShow}}">
+    <slot></slot>
+  </block>
+</view>

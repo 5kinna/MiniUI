@@ -12,7 +12,7 @@ BaseComponent({
     }
   },
   methods: {
-    _getAllCell: function () {
+    _getAllCell() {
       const nodes = this.getRelationNodes('../cell/index')
       const lastIndex = nodes.length - 1
       nodes.forEach((item, index) => {
@@ -20,7 +20,7 @@ BaseComponent({
       })
     }
   },
-  ready: function () {
+  ready() {
     this._getAllCell()
   }
 })

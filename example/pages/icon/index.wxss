@@ -1,1 +1,1 @@
-.flex{display:flex}
+.item-icon{text-align:center;margin:60rpx 20rpx}.item-icon::after{content:attr(data-text);color:#aaa;font-size:26rpx;min-width:300rpx}page{display:flex}

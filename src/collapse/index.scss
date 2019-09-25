@@ -1,0 +1,12 @@
+.__collapse {
+  background: #fff;
+  &-title {
+    padding: 0 30rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
