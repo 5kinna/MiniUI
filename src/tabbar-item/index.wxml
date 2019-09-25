@@ -1,10 +1,10 @@
-<view bind:tap="tapHandle" class="__tabbar-item" style="width:{{width}};">
+<view bind:tap="tapHandle" class="__tabbar-item">
   <view>
-    <slot name="on" wx:if="{{current}}"></slot>
+    <slot name="on" wx:if="{{active}}"></slot>
     <slot name="off" wx:else></slot>
   </view>
   <view>
-    <view wx:if="{{label}}" class="__tabbar-item-txt {{current?'txt-active':''}}">{{label}}</view>
+    <view wx:if="{{label}}" class="__tabbar-item-txt {{active?'txt-active':''}}">{{label}}</view>
     <slot wx:else></slot>
   </view>
 </view>

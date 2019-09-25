@@ -18,6 +18,7 @@ BaseComponent({
       type: String,
       value: 'bottom'
     },
+    // 单位rpx
     height: {
       type: [String, Number],
       value: '98'
@@ -29,58 +30,40 @@ BaseComponent({
     }
   },
   data: {
-    style: '',
     activeKey: '',
     keys: []
   },
+  computed: {
+    style: ['height,position', (height, position) => {
+      let style = `height:${height}rpx`
+      if (checkIPhoneX()) style += `;padding-${position}:${safeAreaInset[position]}rpx;`
+      return style
+    }]
+  },
   ready() {
-    const activeKey = this.data.current
-    this.updated(activeKey)
-    this.getStyle()
+    this.updated(this.data.current || 0)
   },
   methods: {
-    getStyle() {
-      let style = `height:${this.data.height}rpx`
-      if (checkIPhoneX()) style += `;padding-bottom:${safeAreaInset['bottom']}rpx;`
-      this.setData({
-        style
-      })
-    },
     updated(activeKey = this.data.activeKey) {
-      if (this.data.activeKey !== activeKey) {
-        this.setData({
-          activeKey
-        })
-      }
-
+      if (this.data.activeKey === activeKey) return
       this.changeCurrent(activeKey)
+      this.setData({
+        activeKey
+      })
     },
     changeCurrent(activeKey) {
       const elements = this.getRelationNodes('../tabbar-item/index')
       if (elements.length > 0) {
-        elements.forEach((element, index) => {
-          const key = element.data.key || String(index)
-          const current = key === activeKey
-
-          element.changeCurrent(current, key, elements.length)
-        })
-      }
-
-      if (this.data.keys.length !== elements.length) {
-        this.setData({
-          keys: elements.map((element) => element.data)
-        })
+        elements.forEach((ele, index) => ele.changeCurrent(index === activeKey, index))
       }
     },
     emitEvent(key) {
       this.triggerEvent('change', {
-        key,
-        keys: this.data.keys,
+        key
       })
     },
     setActiveTabbar(activeKey) {
       this.updated(activeKey)
-
       this.emitEvent(activeKey)
     }
   }

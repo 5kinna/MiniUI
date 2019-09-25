@@ -1,8 +1,10 @@
 {
-  
+
   "navigationBarTitleText": "",
-  
+
   "usingComponents": {
-    
+    "d-tabbar": "/dist/tabbar/index",
+    "d-tabbar-item": "/dist/tabbar-item/index",
+    "d-icon": "/dist/icon/index"
   }
 }

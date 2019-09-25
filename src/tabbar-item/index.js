@@ -5,14 +5,7 @@ BaseComponent({
       type: 'parent'
     }
   },
-  options: {
-    multipleSlots: true
-  },
   properties: {
-    key: {
-      type: [String, Number],
-      value: 0
-    },
     label: {
       type: String,
       value: ''
@@ -23,16 +16,15 @@ BaseComponent({
     }
   },
   data: {
-    current: false,
-    width: "100%",
-    index: '0'
+    active: false,
+    index: 0
   },
   methods: {
     tapHandle() {
       const {
         index,
         disabled
-      } = this.properties
+      } = this.data
       const parent = this.getRelationNodes('../tabbar/index')[0]
 
       if (disabled || !parent) return
@@ -42,11 +34,9 @@ BaseComponent({
       })
       parent.setActiveTabbar(index)
     },
-    changeCurrent(current, index, length) {
-      const width = 100 / length + '%'
+    changeCurrent(active, index) {
       this.setData({
-        width,
-        current,
+        active,
         index
       })
     }

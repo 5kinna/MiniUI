@@ -1,4 +1,4 @@
-// @import '../scss/variable.scss';
+@import '../style/variable.scss';
 .__tabbar-item {
   display: flex;
   flex-direction: column;
@@ -13,6 +13,6 @@
     color: #7f8389;
   }
   .txt-active {
-    // color: $color-primary;
+    color: $color-primary;
   }
 }

@@ -1,0 +1,48 @@
+.tabbar-wrap {
+  background: #fff;
+}
+
+.tabbar-any {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  margin-left: 0;
+  margin-right: 0;
+  &::before {
+    left: 20rpx;
+  }
+}
+
+.tabbar-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 60rpx;
+    left: 20rpx;
+    color: #aaa;
+    font-size: 26rpx;
+    min-width: 300rpx;
+  }
+}
+
+.tabbar-top {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 60rpx;
+    left: 20rpx;
+    color: #aaa;
+    font-size: 26rpx;
+    min-width: 300rpx;
+  }
+}

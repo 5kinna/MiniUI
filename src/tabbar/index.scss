@@ -1,10 +1,18 @@
-.__tabbar-{
-  background: red;
-  &bottom{
+@import '../style/variable.scss';
+.__tabbar {
+  display: flex;
+  justify-content: space-around;
+  &-bottom,
+  &-top {
     position: fixed;
-    z-index: 999;
-    bottom: 0;
+    z-index: $index-model;
     left: 0;
     right: 0;
+  }
+  &-bottom {
+    bottom: 0;
+  }
+  &-top {
+    top: 0;
   }
 }

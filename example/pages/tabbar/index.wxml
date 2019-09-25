@@ -1,4 +1,48 @@
-<!--index.wxml-->
-<view>
-index
+<view class="tabbar-top" data-text="顶部位置" style="top:{{ipx?110:50}}rpx;">
+  <d-tabbar mini-clz="tabbar-wrap" position="top">
+    <d-tabbar-item label="菜单1">
+      <d-icon type="home-selected" slot="on" color="#1aad19"></d-icon>
+      <d-icon type="home" slot="off"></d-icon>
+    </d-tabbar-item>
+    <d-tabbar-item label="菜单2">
+      <d-icon type="home-selected" slot="on" color="#1aad19"></d-icon>
+      <d-icon type="home" slot="off"></d-icon>
+    </d-tabbar-item>
+    <d-tabbar-item label="菜单3">
+      <d-icon type="home-selected" slot="on" color="#1aad19"></d-icon>
+      <d-icon type="home" slot="off"></d-icon>
+    </d-tabbar-item>
+  </d-tabbar>
+</view>
+<view class="item tabbar-any" data-text="任意位置">
+  <d-tabbar mini-clz="tabbar-wrap" position="">
+    <d-tabbar-item label="菜单1">
+      <d-icon type="home-selected" slot="on" color="#1aad19"></d-icon>
+      <d-icon type="home" slot="off"></d-icon>
+    </d-tabbar-item>
+    <d-tabbar-item label="菜单2">
+      <d-icon type="home-selected" slot="on" color="#1aad19"></d-icon>
+      <d-icon type="home" slot="off"></d-icon>
+    </d-tabbar-item>
+    <d-tabbar-item label="菜单3">
+      <d-icon type="home-selected" slot="on" color="#1aad19"></d-icon>
+      <d-icon type="home" slot="off"></d-icon>
+    </d-tabbar-item>
+  </d-tabbar>
+</view>
+<view class="tabbar-bottom" data-text="底部位置" style="bottom:{{ipx?110:50}}rpx">
+  <d-tabbar mini-clz="tabbar-wrap" height="98">
+    <d-tabbar-item label="菜单1">
+      <d-icon type="home-selected" slot="on" color="#1aad19"></d-icon>
+      <d-icon type="home" slot="off"></d-icon>
+    </d-tabbar-item>
+    <d-tabbar-item label="菜单2">
+      <d-icon type="home-selected" slot="on" color="#1aad19"></d-icon>
+      <d-icon type="home" slot="off"></d-icon>
+    </d-tabbar-item>
+    <d-tabbar-item label="菜单3">
+      <d-icon type="home-selected" slot="on" color="#1aad19"></d-icon>
+      <d-icon type="home" slot="off"></d-icon>
+    </d-tabbar-item>
+  </d-tabbar>
 </view>

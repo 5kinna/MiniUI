@@ -1,8 +1,8 @@
-const app = getApp()
-
+import {
+  checkIPhoneX
+} from '../../dist/utils/checkIphonex'
 Page({
   data: {
-  },
-  onLoad() {
+    ipx: checkIPhoneX()
   }
 })
