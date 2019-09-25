@@ -33,13 +33,20 @@ BaseComponent({
     changeHandle() {
       const {
         active,
-        index
+        index,
+        disabled
       } = this.data
+
+      if (disabled) return
+
       const nodes = this.getRelationNodes('../collapse-group/index')[0]
+
       this.setData({
         active: !active
       })
+
       if (nodes && nodes.data.accordion && !active) nodes.changeCurrent(index)
+
       this.triggerEvent('click', {
         index
       })

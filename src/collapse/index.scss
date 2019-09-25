@@ -1,4 +1,5 @@
 @import '../style/mixin.scss';
+@import '../style/variable.scss';
 .__collapse {
   background: #fff;
   &-title {
@@ -28,4 +29,8 @@
   &-down {
     transition: all .4s;
   }
+}
+
+.__collapse-disabled {
+  background: $color-disabled;
 }

@@ -1,4 +1,4 @@
-<view class="__collapse">
+<view class="__collapse {{disabled?'__collapse-disabled':''}} mini-clz">
   <view capture-catch:tap="changeHandle" class="{{active?'__collapse-top':''}}">
     <view wx:if="{{title}}" class="__collapse-title">
       <view class="text">{{title}}</view>
