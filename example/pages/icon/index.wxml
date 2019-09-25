@@ -1,6 +1,6 @@
-<d-icon type="top" class="item-icon" data-text="top"></d-icon>
-<d-icon type="down" data-text="down" class="item-icon"></d-icon>
-<d-icon type="right" data-text="right" class="item-icon"></d-icon>
-<d-icon type="left-full" data-text="left-full" class="item-icon"></d-icon>
-<d-icon type="right-full" data-text="right-full" class="item-icon"></d-icon>
-<d-icon type="delete" data-text="delete" class="item-icon"></d-icon>
+<d-icon type="top" class="item-icon" data-text="top" color="#7B8087"></d-icon>
+<d-icon type="down" data-text="down" class="item-icon" color="#7B8087"></d-icon>
+<d-icon type="right" data-text="right" class="item-icon" color="#7B8087"></d-icon>
+<d-icon type="left-full" data-text="left-full" class="item-icon" color="#7B8087"></d-icon>
+<d-icon type="right-full" data-text="right-full" class="item-icon" color="#7B8087"></d-icon>
+<d-icon type="delete" data-text="delete" class="item-icon" color="#7B8087"></d-icon>
