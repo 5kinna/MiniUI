@@ -1,62 +1,48 @@
 import BaseComponent from '../utils/baseComponent'
 BaseComponent({
   relations: {
-    '../collapse-group/index': {
-      type: 'parent'
+    '../collapse-item/index': {
+      type: 'child'
     }
   },
   properties: {
-    show: {
-      type: Boolean,
-      value: false
-    },
-    name: {
+    active: {
       type: [String, Number],
-      value: ''
+      value: '',
+      observer: 'updated'
     },
-    title: {
-      type: String,
-      value: ''
-    },
-    disabled: {
+    // 是否是手风琴模式
+    accordion: {
       type: Boolean,
       value: false
     }
   },
   data: {
-    index: 0
-  },
-  computed: {
-    active: ['show', (show) => show]
+    activeKey: ''
   },
   methods: {
-    changeHandle() {
+    changeCurrent(activeKey) {
       const {
-        active,
-        index,
-        disabled
+        accordion
       } = this.data
-
-      if (disabled) return
-
-      const nodes = this.getRelationNodes('../collapse-group/index')[0]
-
-      this.setData({
-        active: !active
+      const collapses = this.getRelationNodes('../collapse-item/index')
+      if (!collapses.length || !accordion) return
+      collapses.forEach((ele, index) => {
+        ele.changeCurrent(index === activeKey, ele.data.name || index)
       })
-
-      if (nodes && nodes.data.accordion && !active) nodes.changeCurrent(index)
-
-      this.triggerEvent('click', {
-        index
+      this.emitEvent(activeKey)
+    },
+    emitEvent(key) {
+      this.triggerEvent('change', {
+        key
       })
     },
-    changeCurrent(active, index) {
+    updated(activeKey = this.data.activeKey) {
+      if (this.data.activeKey === activeKey) return
+      this.changeCurrent(activeKey)
       this.setData({
-        active,
-        index
+        activeKey
       })
     }
-  },
-  ready() {}
+  }
 })

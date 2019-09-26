@@ -1,0 +1,3 @@
+<view class="__sticky">
+  <slot></slot>
+</view>

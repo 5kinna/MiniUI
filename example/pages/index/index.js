@@ -1,8 +1,12 @@
-const app = getApp()
-
 Page({
   data: {
+    scrollTop: 0
   },
-  onLoad() {
+  onPageScroll({
+    scrollTop
+  }) {
+    this.setData({
+      scrollTop
+    })
   }
 })

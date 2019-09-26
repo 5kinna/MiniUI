@@ -3,7 +3,9 @@
   "navigationBarTitleText": "",
 
   "usingComponents": {
-    "d-cell-group": "/dist/cell-group/index",
-    "d-cell": "/dist/cell/index"
+    "d-cell": "/dist/cell/index",
+    "d-cell-item": "/dist/cell-item/index",
+    "d-sticky": "/dist/sticky/index",
+    "d-sticky-item": "/dist/sticky-item/index"
   }
 }
