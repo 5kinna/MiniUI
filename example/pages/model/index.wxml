@@ -1,4 +1,17 @@
-<!--index.wxml-->
-<view>
-index
+<view class="item" data-text="消息提示">
+  <d-model title="提示" message="这是一段消息提示" show="{{showBasic}}"></d-model>
+  <view bind:tap="showHandle" class="btn" data-show="showBasic">点击打开提示</view>
+</view>
+<view class="item" data-text="确认消息">
+  <d-model title="提示" message="这是一段确认消息" show="{{showConfirm}}" showCancelButton="{{false}}"></d-model>
+  <view bind:tap="showHandle" class="btn" data-show="showConfirm">点击打开提示</view>
+</view>
+<view class="item" data-text="自定义">
+  <d-model title="提示" show="{{showDefined}}" showCancelButton="{{false}}">
+    <view class="defined">
+      <view>这是一段自定义内容</view>
+      <view>这也是一段自定义内容</view>
+    </view>
+  </d-model>
+  <view bind:tap="showHandle" class="btn" data-show="showDefined">点击打开提示</view>
 </view>

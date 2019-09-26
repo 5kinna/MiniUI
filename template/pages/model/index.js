@@ -1,8 +1,15 @@
-const app = getApp()
-
 Page({
   data: {
+    showBasic: false,
+    showConfirm: false,
+    showDefined: false
   },
-  onLoad() {
+  showHandle(e) {
+    const {
+      show
+    } = e.currentTarget.dataset
+    this.setData({
+      [show]: true
+    })
   }
 })

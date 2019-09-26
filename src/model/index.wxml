@@ -1,0 +1,18 @@
+<view class="__model" wx:if="{{isShow}}" capture-catch:tap="clickModel"></view>
+<view class="__model-main" wx:if="{{isShow}}">
+  <block>
+    <view wx:if="{{title}}" class="__model-title">{{title}}</view>
+    <slot wx:else name="title"></slot>
+  </block>
+  <block>
+    <view wx:if="{{message}}" class="__model-message">{{message}}</view>
+    <slot wx:else></slot>
+  </block>
+  <block>
+    <view wx:if="{{showCancelButton||showConfirmButton}}" class="__model-footer">
+      <view wx:if="{{showCancelButton}}" class="__model-footer-item __model-footer-cancel" capture-catch:tap="cancel">{{cancelButtonText}}</view>
+      <view wx:if="{{showConfirmButton}}" class="__model-footer-item __model-footer-confirm" capture-catch:tap="confirm">{{confirmButtonText}}</view>
+    </view>
+    <slot wx:else name="footer"></slot>
+  </block>
+</view>

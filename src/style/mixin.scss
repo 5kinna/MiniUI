@@ -31,3 +31,10 @@
     border-bottom-width: 1px;
   }
 }
+
+@mixin lline($color:$color-boder) {
+  @include line($color);
+  &::before {
+    border-left-width: 1px;
+  }
+}

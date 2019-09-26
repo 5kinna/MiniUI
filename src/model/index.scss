@@ -1,0 +1,48 @@
+@import '../style/variable.scss';
+@import '../style/mixin.scss';
+.__model {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .6);
+  z-index: $index-full-model;
+  &-main {
+    position: fixed;
+    top: 30%;
+    left: 60rpx;
+    right: 60rpx;
+    background: #fff;
+    border-radius: 8rpx;
+    z-index: $index-full-over;
+    text-align: center;
+  }
+  &-title {
+    font-size: 32rpx;
+    padding: 50rpx 0 40rpx;
+    font-weight: 700;
+  }
+  &-message {
+    padding: 0 30rpx 40rpx;
+    font-size: 30rpx;
+    color: $color-font-sub;
+    line-height: 1.5;
+  }
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tline();
+    &-item {
+      flex: 1;
+      font-weight: 700;
+      padding: 30rpx 0;
+      font-size: 30rpx;
+    }
+    &-confirm {
+      color: $color-font-hint;
+      @include lline();
+    }
+  }
+}
