@@ -4,7 +4,7 @@
 
 ## 文档
 
-[中文文档](https://github.com/5kinna/MiniUI/docs-zh.md)
+[中文文档](https://github.com/5kinna/MiniUI/blob/master/docs-zh.md)
 
 ## 体验
 
