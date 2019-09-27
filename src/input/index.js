@@ -7,7 +7,7 @@ BaseComponent({
     },
     type: {
       type: String,
-      value: 'test'
+      value: 'text'
     },
     password: {
       type: Boolean,
@@ -62,11 +62,28 @@ BaseComponent({
       value: false
     }
   },
+  computed: {
+    val: ['value', (value) => value]
+  },
   methods: {
     onInput(e) {
-      const value = e.detail.value
+      const {
+        value
+      } = e.detail
+      const {
+        val
+      } = this.data
+      if (Object.is(value, val)) return
+      this.setData({
+        val: value
+      })
       this.triggerEvent('input', value)
-      this.properties.syncAttrMap && this.setDataSmart('value', value)
+    },
+    onClear() {
+      this.setData({
+        val: ''
+      })
+      this.triggerEvent('clear')
     }
   }
 })

@@ -1,4 +1,15 @@
-<!--index.wxml-->
-<view>
-index
+<view class="item" data-text="基础用法">
+  <d-input placeholder="请输入内容"></d-input>
+</view>
+<view class="item" data-text="禁用状态">
+  <d-input placeholder="请输入内容" disabled></d-input>
+</view>
+<view class="item" data-text="可清空">
+  <d-input placeholder="请输入内容" clear></d-input>
+</view>
+<view class="item" data-text="密码框">
+  <d-input placeholder="请输入内容" password></d-input>
+</view>
+<view class="item" data-text="最大长度">
+  <d-input placeholder="请输入内容" maxlength="{{10}}"></d-input>
 </view>
