@@ -23,9 +23,7 @@
   </d-sticky-item>
   <d-sticky-item title="反馈组件">
     <d-cell title="">
-      <d-cell-item title="Toast提示" isLink url="../toast/index"></d-cell-item>
       <d-cell-item title="Model对话框" isLink url="../model/index"></d-cell-item>
-      <d-cell-item title="Message全局提示" isLink url="../message/index"></d-cell-item>
       <d-cell-item title="Loading加载中" isLink url="../loading/index"></d-cell-item>
       <d-cell-item title="Swiper滑动菜单" isLink url="../swiper/index"></d-cell-item>
     </d-cell>

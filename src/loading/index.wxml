@@ -1,0 +1,12 @@
+<view class="__loading __loading-{{mask}} {{fullscreen?'__loading-fullscreen':'__loading-part'}}" wx:if="{{show}}">
+  <view class="__loading-main">
+    <block>
+      <view class="__loading-{{type}}" wx:if="{{type}}"></view>
+      <slot wx:else name="type"></slot>
+    </block>
+    <block>
+      <view wx:if="{{title}}" class="__loading-title">{{title}}</view>
+      <slot wx:else></slot>
+    </block>
+  </view>
+</view>
