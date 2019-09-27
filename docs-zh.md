@@ -118,8 +118,6 @@
 
 ### Radio单选
 
-### CheckBox多选
-
 ### Picker选择
 
 ## 导航组件
@@ -131,6 +129,8 @@
 ### NoticeBar通告栏
 
 ### Index索引选择器
+
+### List列表页
 
 ## 反馈组件
 
@@ -144,6 +144,236 @@
 
 ### Badge徽章
 
+#### 概述
+
+视图组件，标识节点状态或数字
+
+#### 使用指南
+
+在.json文件中引入组件
+
+```json
+"usingComponents": {
+    "d-badge": "../../dist/badge/index"
+}
+```
+
+#### 示例
+
+```html
+<!-- 显示点 -->
+<d-badge dot></d-badge>
+
+<!-- 显示数字 -->
+<d-badge count="5"></d-badge>
+
+<!-- 显示阈值数字 -->
+<d-badge></d-badge>
+
+<!-- 不可编辑 -->
+<d-badge disable></d-badge>
+
+```
+
+#### API
+
+##### properties
+
+|  属性   |   说明  |  类型  | 默认值 |
+| --- | --- |  --- |  --- |
+|  count | 右上角显示数字 | Number | 199 |
+|  over | 右上角显示数字的阈值 | Number | 99 |
+|  dot | 右上角是否显示点 | Boolean | false |
+|  disable | 右上角状态标识是否不可见 | Boolean | false |
+
+#### slots
+
+|  name   |   说明  |
+| --- | --- |
+|  空（即默认） | 需要标识状态的节点 |
+
 ### Tag标签
 
+#### 概述
+
+视图组件，用于标记和选择
+
+#### 使用指南
+
+在.json文件中引入组件
+
+```json
+"usingComponents": {
+    "d-tag": "../../dist/tag/index"
+}
+```
+
+#### 示例
+
+```html
+<!-- 基本使用 -->
+<d-tag>标签</d-tag>
+
+<!-- 颜色 -->
+<d-tag color="255,199,52">颜色</d-tag>
+
+<!-- 可删除 -->
+<d-tag closable bind:click="removeTag">可删除</d-tag>
+
+```
+
+#### API
+
+##### properties
+
+|  属性   |   说明  |  类型  | 默认值 |
+| --- | --- |  --- |  --- |
+|  color | 图标背景颜色（rgb格式） | String | '72,153,255' |
+|  textColor | 图标显示文字颜色（如果不予设置，则默认为背景颜色值） | String | '' |
+|  closable | 是否可删除 | Boolean | false |
+
+#### slots
+
+|  name   |   说明  |
+| --- | --- |
+|  空（即默认） | 图标文案 |
+
+#### events
+
+|  事件名   |   说明  | 回调参数 |
+| --- | --- | --- |
+|  click | 点击图标事件 | 无 |
+|  close | 删除图标事件 | 无 |
+
 ### Collapse折叠面板
+
+#### 概述
+
+视图组件，展示或隐藏信息
+
+#### 使用指南
+
+在.json文件中引入组件
+
+```json
+"usingComponents": {
+    "d-collapse": "../../dist/collapse/index",
+    "d-collapse-item": "../../dist/collapse-item/index"
+}
+```
+
+#### 示例
+
+```html
+<!-- 非手风琴模式 -->
+<d-collapse>
+    <d-collapse-item title="一致性">
+        <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+        </view>
+    </d-collapse-item>
+    <d-collapse-item title="一致性一致性一致性一致性一致性一致性一致性一致性一致性">
+        <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+        </view>
+    </d-collapse-item>
+    <d-collapse-item title="一致性">
+        <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+        </view>
+    </d-collapse-item>
+</d-collapse>
+
+<!-- 手风琴模式 -->
+<d-collapse accordion="{{true}}">
+    <d-collapse-item title="一致性">
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
+    </d-collapse-item>
+    <d-collapse-item title="一致性">
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
+    </d-collapse-item>
+    <d-collapse-item title="一致性">
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
+    </d-collapse-item>
+</d-collapse>
+
+<!-- 不可编辑 -->
+<d-collapse>
+    <d-collapse-item title="一致性" disabled show>
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
+    </d-collapse-item>
+    <d-collapse-item title="一致性">
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
+    </d-collapse-item>
+    <d-collapse-item title="一致性">
+      <view class="collapse-main">
+        <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
+        <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
+      </view>
+    </d-collapse-item>
+</d-collapse>
+
+```
+
+#### API
+
+##### Collapse properties
+
+|  属性   |   说明  |  类型  | 默认值 |
+| --- | --- |  --- |  --- |
+|  active | 当前展开的子项 | [String,Number] | ' ' |
+|  accordion | 是否是手风琴模式 | Boolean | false |
+
+##### Collapse-item properties
+
+|  属性   |   说明  |  类型  | 默认值 |
+| --- | --- |  --- |  --- |
+|  show | 是否展开 | Boolean | false |
+|  name | 组件标识 | [String, Number] | ' ' |
+|  title | 组件头部显示文案 | String | ' ' |
+|  disabled | 组件是否不可变更展开状态 | Boolean | false |
+
+#### Collapse slots
+
+|  name   |   说明  |
+| --- | --- |
+|  空（即默认） | 子项整体 |
+
+#### Collapse-item slots
+
+|  name   |   说明  |
+| --- | --- |
+|  空（即默认） | 可展开内容 |
+|  title | 头部显示内容 |
+
+#### Collapse events
+
+|  事件名   |   说明  | 回调参数 |
+| --- | --- | --- |
+|  change | 当前展开子项变更事件 | 无 |
+
+#### Collapse-item events
+
+|  事件名   |   说明  | 回调参数 |
+| --- | --- | --- |
+|  click | 变更展开状态事件 | { index(在父组件中的标识) } |
+
+### Sticky吸顶菜单
