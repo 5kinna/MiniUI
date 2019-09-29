@@ -29,6 +29,7 @@ BaseComponent({
       this.setData({
         isFixed: fixed
       })
+      this.triggerEvent('change')
     }
   },
   ready() {

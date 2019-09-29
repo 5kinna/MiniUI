@@ -37,7 +37,7 @@
 
 #### API
 
-##### properties
+##### Image properties
 
 |  属性   |   说明  |  类型  | 默认值 |
 | --- | --- |  --- |  --- |
@@ -51,7 +51,7 @@
 |  error | 图片资源异常提示文案 | String | '图片异常 |
 |  type | 图片类型（avator：头像；normal：一般图片） | String | 'normal' |
 
-#### slots
+#### Image slots
 
 |  name   |   说明  |
 | --- | --- |
@@ -60,7 +60,7 @@
 |  error | 图片资源加载异常提示内容 |
 |  空（即默认） | 图片底部内容 |
 
-#### events
+#### Image events
 
 |  事件名   |   说明  | 回调参数 |
 | --- | --- | --- |
@@ -104,7 +104,7 @@
 
 #### API
 
-##### properties
+##### Icon properties
 
 |  属性   |   说明  |  类型  | 默认值 |
 | --- | --- |  --- |  --- |
@@ -131,6 +131,74 @@
 ### Index索引选择器
 
 ### List列表页
+
+#### 概述
+
+导航组件，用于列表基础布局
+
+#### 使用指南
+
+在.json文件中引入组件
+
+```json
+"usingComponents": {
+    "d-cell": "../../dist/cell/index",
+    "d-cell-item": "../../dist/cell-item/index"
+}
+```
+
+#### 示例
+
+```html
+<d-cell title="导航组件">
+  <d-cell-item title="TabBar标签栏" isLink url="../tabbar/index"></d-cell-item>
+  <d-cell-item title="Tabs标签页" isLink url="../tabs/index"></d-cell-item>
+  <d-cell-item title="NoticeBar通告栏" isLink url="../noticebar/index"></d-cell-item>
+  <d-cell-item title="Index索引选择器" isLink url="../indexselect/index"></d-cell-item>
+</d-cell>
+
+```
+
+#### API
+
+##### Cell properties
+
+|  属性   |   说明  |  类型  | 默认值 |
+| --- | --- |  --- |  --- |
+|  title | 列表某部分标题 | String | '' |
+
+##### Cell-item properties
+
+|  属性   |   说明  |  类型  | 默认值 |
+| --- | --- |  --- |  --- |
+|  title | 左侧主要显示文案 | String | ' ' |
+|  label | 左侧标题下面说明文案 | String | ' ' |
+|  tip | 右侧说明文案 | String | ' ' |
+|  isLink | 是否显示右侧箭头 | Boolean | true |
+|  isLine | 是否显示底部边框线 | Boolean | false |
+|  linkType | 跳转方式 | String | navigateTo |
+|  url | 连接地址 | String | ' ' |
+|  onlyTapFooter | 是否只在点击右侧部分的时候跳转 | Boolean | false |
+
+#### Cell slots
+
+|  name   |   说明  |
+| --- | --- |
+|  空（即默认） | 列表子项整体内容 |
+
+#### Cell-item slots
+
+|  name   |   说明  |
+| --- | --- |
+|  空（即默认） | 左侧主体内容 |
+|  icon | 左侧标题前面图标内容 |
+|  footer | 右侧内容 |
+
+#### Cell-item events
+
+|  事件名   |   说明  | 回调参数 |
+| --- | --- | --- |
+|  click | 点击跳转之前的操作 | 无 |
 
 ## 反馈组件
 
@@ -177,7 +245,7 @@
 
 #### API
 
-##### properties
+##### Badge properties
 
 |  属性   |   说明  |  类型  | 默认值 |
 | --- | --- |  --- |  --- |
@@ -186,7 +254,7 @@
 |  dot | 右上角是否显示点 | Boolean | false |
 |  disable | 右上角状态标识是否不可见 | Boolean | false |
 
-#### slots
+#### Badge slots
 
 |  name   |   说明  |
 | --- | --- |
@@ -224,7 +292,7 @@
 
 #### API
 
-##### properties
+##### Tag properties
 
 |  属性   |   说明  |  类型  | 默认值 |
 | --- | --- |  --- |  --- |
@@ -232,13 +300,13 @@
 |  textColor | 图标显示文字颜色（如果不予设置，则默认为背景颜色值） | String | '' |
 |  closable | 是否可删除 | Boolean | false |
 
-#### slots
+#### Tag slots
 
 |  name   |   说明  |
 | --- | --- |
 |  空（即默认） | 图标文案 |
 
-#### events
+#### Tag events
 
 |  事件名   |   说明  | 回调参数 |
 | --- | --- | --- |
@@ -377,3 +445,74 @@
 |  click | 变更展开状态事件 | { index(在父组件中的标识) } |
 
 ### Sticky吸顶菜单
+
+#### 概述
+
+视图组件，用于将标题栏在滚动时固定到页面顶部
+
+#### 使用指南
+
+在.json文件中引入组件
+
+```json
+"usingComponents": {
+    "d-sticky": "../../dist/sticky/index",
+    "d-sticky-item": "../../dist/sticky-item/index"
+}
+```
+
+#### 示例
+
+```html
+<d-sticky scrollTop="{{scrollTop}}">
+  <d-sticky-item title="基础组件">
+    <!-- 同类子项内容 -->
+  </d-sticky-item>
+  <d-sticky-item title="表单组件">
+    <!-- 同类子项内容 -->
+  </d-sticky-item>
+  <d-sticky-item title="导航组件">
+    <!-- 同类子项内容 -->
+  </d-sticky-item>
+  <d-sticky-item title="反馈组件">
+    <!-- 同类子项内容 -->
+  </d-sticky-item>
+  <d-sticky-item title="视图组件">
+    <!-- 同类子项内容 -->
+  </d-sticky-item>
+</d-sticky>
+
+```
+
+#### API
+
+##### Sticky properties
+
+|  属性   |   说明  |  类型  | 默认值 |
+| --- | --- |  --- |  --- |
+|  scrollTop | 距离页面顶部距离 | Number | 0 |
+
+##### Sticky-item properties
+
+|  属性   |   说明  |  类型  | 默认值 |
+| --- | --- |  --- |  --- |
+|  title | 同类标题 | String | ' ' |
+
+#### Sticky slots
+
+|  name   |   说明  |
+| --- | --- |
+|  空（即默认） | 多项分类整体内容 |
+
+#### Sticky-item slots
+
+|  name   |   说明  |
+| --- | --- |
+|  空（即默认） | 分类子项整体内容 |
+|  title | 分类标题内容 |
+
+#### Sticky-item events
+
+|  事件名   |   说明  | 回调参数 |
+| --- | --- | --- |
+|  change | 固定到页面顶部标题变更 | 无 |

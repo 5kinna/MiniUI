@@ -50,7 +50,7 @@ BaseComponent({
         isLink,
         linkType
       } = this.data
-      this.triggerEvent('click', {})
+      this.triggerEvent('click')
       if (!isLink || !url) return
       if (!['navigateTo', 'redirectTo', 'switchTab', 'reLaunch'].includes(linkType)) {
         console.log('linkType 属性可选值为 navigateTo，redirectTo，switchTab，reLaunch')
