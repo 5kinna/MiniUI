@@ -4,9 +4,16 @@ BaseComponent({
   relations: {
     '../radio-group/index': {
       type: 'parent'
+    },
+    '../checkbox-group/index': {
+      type: 'parent'
     }
   },
   properties: {
+    type: {
+      type: String,
+      value: 'radio'
+    },
     position: {
       type: String,
       value: 'left'
@@ -50,12 +57,13 @@ BaseComponent({
         check,
         index,
         disabled,
-        value
+        value,
+        type
       } = this.data
 
       if (disabled) return
 
-      const node = this.getRelationNodes('../radio-group/index')[0]
+      const node = this.getRelationNodes(`../${type}-group/index`)[0]
 
       if (!node) {
         this.setData({
@@ -67,7 +75,7 @@ BaseComponent({
         return
       }
 
-      node.setActiveTabbar(index)
+      node.setActiveTabbar([index, !check])
     },
     changeCurrent(check, index) {
       this.setData({

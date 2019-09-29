@@ -1,0 +1,14 @@
+@import '../style/mixin.scss';
+.__checkbox-group {
+  &-title {
+    padding: 20rpx 40rpx;
+  }
+  &-main {
+    background: #fff;
+    @include line();
+    &::before {
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+    }
+  }
+}

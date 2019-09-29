@@ -1,0 +1,6 @@
+<view class="__checkbox-group">
+  <view wx:if="{{title}}" class="__checkbox-group-title">{{title}}</view>
+  <view class="__checkbox-group-main">
+    <slot></slot>
+  </view>
+</view>

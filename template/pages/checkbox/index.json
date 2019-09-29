@@ -1,0 +1,9 @@
+{
+
+  "navigationBarTitleText": "",
+
+  "usingComponents": {
+    "d-checkbox-group": "/dist/checkbox-group/index",
+    "d-checkbox": "/dist/select/index"
+  }
+}

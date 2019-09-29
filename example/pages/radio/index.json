@@ -4,6 +4,6 @@
 
   "usingComponents": {
     "d-radio-group": "/dist/radio-group/index",
-    "d-radio": "/dist/radio/index"
+    "d-radio": "/dist/select/index"
   }
 }

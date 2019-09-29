@@ -1,6 +1,7 @@
 @import '../style/variable.scss';
 @import '../style/mixin.scss';
-.__radio {
+.__radio,
+.__checkbox {
   &-label {
     display: flex;
     align-items: center;

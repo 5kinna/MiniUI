@@ -9,6 +9,7 @@
     <d-cell-group title="">
       <d-cell title="Input输入框" isLink url="../input/index"></d-cell>
       <d-cell title="Radio单选" isLink url="../radio/index"></d-cell>
+      <d-cell title="Checkbox单选" isLink url="../checkbox/index"></d-cell>
       <d-cell title="Picker选择" isLink url="../picker/index"></d-cell>
     </d-cell-group>
   </d-sticky-item>

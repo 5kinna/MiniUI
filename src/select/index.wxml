@@ -1,0 +1,10 @@
+<view class="__{{type}} {{isLine?'__'+type+'-bline':''}} mini-clz" catch:tap="changeHandle">
+  <label class="__{{type}}-label">
+    <radio disabled="{{disabled}}" value="{{value}}" checked="{{check}}" class="__{{type}}-{{position}}" wx:if="{{type==='radio'}}"></radio>
+    <checkbox disabled="{{disabled}}" value="{{value}}" checked="{{check}}" class="__{{type}}-{{position}}" wx:if="{{type==='checkbox'}}"></checkbox>
+    <view wx:if="{{content}}">{{content}}</view>
+    <block wx:else>
+      <slot></slot>
+    </block>
+  </label>
+</view>

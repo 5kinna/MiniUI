@@ -1,0 +1,16 @@
+<d-checkbox-group title="基本用法">
+  <d-checkbox wx:for="{{4}}" wx:key="{{item}}" type="checkbox">选项{{item+1}}</d-checkbox>
+</d-checkbox-group>
+<d-checkbox-group title="右侧显示">
+  <d-checkbox wx:for="{{4}}" wx:key="{{item}}" position="right" type="checkbox">选项{{item+1}}</d-checkbox>
+</d-checkbox-group>
+<d-checkbox-group title="设置默认项" current="{{['test2','test1']}}">
+  <d-checkbox wx:for="{{4}}" wx:key="{{item}}" value="test{{item+1}}" type="checkbox">选项{{item+1}}</d-checkbox>
+</d-checkbox-group>
+<view class="item" data-text="单个选项">
+  <d-checkbox checked type="checkbox">单个选项</d-checkbox>
+</view>
+<view class="item" data-text="禁用选项">
+  <d-checkbox checked disabled type="checkbox">禁用选项</d-checkbox>
+  <d-checkbox disabled type="checkbox">禁用选项</d-checkbox>
+</view>

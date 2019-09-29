@@ -8,7 +8,7 @@ BaseComponent({
   },
   properties: {
     current: {
-      type: [String, Number],
+      type: Array,
       value: '',
       observer: 'updated'
     },
@@ -18,7 +18,7 @@ BaseComponent({
     }
   },
   data: {
-    activeKey: -1,
+    activeKey: [],
   },
   methods: {
     initChildLine() {
@@ -29,7 +29,7 @@ BaseComponent({
       })
     },
     updated(activeKey = this.data.activeKey) {
-      if (this.data.activeKey === activeKey) return
+      if (Object.is(activeKey, this.data.activeKey)) return
       this.changeCurrent(activeKey)
       this.setData({
         activeKey
@@ -40,7 +40,7 @@ BaseComponent({
       if (elements.length > 0) {
         elements.forEach((ele, index) => {
           const value = ele.data.value || index
-          ele.changeCurrent(value === activeKey, value)
+          ele.changeCurrent(activeKey.includes(value), value)
         })
       }
     },
@@ -49,8 +49,13 @@ BaseComponent({
         value: activeKey
       })
     },
-    setActiveTabbar([activeKey]) {
-      if (this.data.activeKey === activeKey) return
+    setActiveTabbar([index, checked]) {
+      const activeKey = [...this.data.activeKey]
+      if (checked) activeKey.push(index)
+      else {
+        const i = activeKey.indexOf(index)
+        i >= 0 && activeKey.splice(i, 1)
+      }
       this.updated(activeKey)
       this.emitEvent(activeKey)
     }
