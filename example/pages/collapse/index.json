@@ -3,7 +3,7 @@
   "navigationBarTitleText": "",
 
   "usingComponents": {
-    "d-collapse-item": "/dist/collapse-item/index",
-    "d-collapse": "/dist/collapse/index"
+    "d-collapse": "/dist/collapse/index",
+    "d-collapse-group": "/dist/collapse-group/index"
   }
 }

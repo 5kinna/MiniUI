@@ -1,30 +1,9 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/icon/index",
-    "pages/tag/index",
-    "pages/input/index",
-    "pages/radio/index",
-    "pages/checkbox/index",
-    "pages/picker/index",
-    "pages/tabbar/index",
-    "pages/tabs/index",
-    "pages/noticebar/index",
-    "pages/indexselect/index",
-    "pages/toast/index",
-    "pages/model/index",
-    "pages/message/index",
-    "pages/loading/index",
-    "pages/swiper/index",
-    "pages/badge/index",
-    "pages/collapse/index",
-    "pages/image/index"
-  ],
+  "pages": ["pages/index/index", "pages/icon/index", "pages/tag/index", "pages/input/index", "pages/radio/index", "pages/picker/index", "pages/tabbar/index", "pages/tabs/index", "pages/noticebar/index", "pages/indexselect/index", "pages/model/index", "pages/loading/index", "pages/swiper/index", "pages/badge/index", "pages/collapse/index", "pages/image/index"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "MiniUI",
     "navigationBarTextStyle": "black"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }

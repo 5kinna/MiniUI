@@ -1,4 +1,16 @@
-<!--index.wxml-->
-<view>
-index
+<d-radio-group title="基本用法">
+  <d-radio wx:for="{{4}}" wx:key="{{item}}">选项{{item+1}}</d-radio>
+</d-radio-group>
+<d-radio-group title="右侧显示">
+  <d-radio wx:for="{{4}}" wx:key="{{item}}" position="right">选项{{item+1}}</d-radio>
+</d-radio-group>
+<d-radio-group title="设置默认项" current="test2">
+  <d-radio wx:for="{{4}}" wx:key="{{item}}" value="test{{item+1}}">选项{{item+1}}</d-radio>
+</d-radio-group>
+<view class="item" data-text="单个选项">
+  <d-radio checked>单个选项</d-radio>
+</view>
+<view class="item" data-text="禁用选项">
+  <d-radio checked disabled>禁用选项</d-radio>
+  <d-radio disabled>禁用选项</d-radio>
 </view>

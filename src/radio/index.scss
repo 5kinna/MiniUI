@@ -1,0 +1,20 @@
+@import '../style/variable.scss';
+@import '../style/mixin.scss';
+.__radio {
+  &-label {
+    display: flex;
+    align-items: center;
+    min-height: 120rpx;
+    padding: 0 30rpx;
+  }
+  &-right {
+    position: absolute;
+    right: 30rpx;
+  }
+  &-bline {
+    @include bline();
+    &::before {
+      left: 30rpx;
+    }
+  }
+}

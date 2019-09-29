@@ -142,32 +142,32 @@
 
 ```json
 "usingComponents": {
-    "d-cell": "../../dist/cell/index",
-    "d-cell-item": "../../dist/cell-item/index"
+    "d-cell-group": "../../dist/cell-group/index",
+    "d-cell": "../../dist/cell/index"
 }
 ```
 
 #### 示例
 
 ```html
-<d-cell title="导航组件">
-  <d-cell-item title="TabBar标签栏" isLink url="../tabbar/index"></d-cell-item>
-  <d-cell-item title="Tabs标签页" isLink url="../tabs/index"></d-cell-item>
-  <d-cell-item title="NoticeBar通告栏" isLink url="../noticebar/index"></d-cell-item>
-  <d-cell-item title="Index索引选择器" isLink url="../indexselect/index"></d-cell-item>
-</d-cell>
+<d-cell-group title="导航组件">
+  <d-cell title="TabBar标签栏" isLink url="../tabbar/index"></d-cell>
+  <d-cell title="Tabs标签页" isLink url="../tabs/index"></d-cell>
+  <d-cell title="NoticeBar通告栏" isLink url="../noticebar/index"></d-cell>
+  <d-cell title="Index索引选择器" isLink url="../indexselect/index"></d-cell>
+</d-cell-group>
 
 ```
 
 #### API
 
-##### Cell properties
+##### Cell-group properties
 
 |  属性   |   说明  |  类型  | 默认值 |
 | --- | --- |  --- |  --- |
 |  title | 列表某部分标题 | String | '' |
 
-##### Cell-item properties
+##### Cell properties
 
 |  属性   |   说明  |  类型  | 默认值 |
 | --- | --- |  --- |  --- |
@@ -180,13 +180,13 @@
 |  url | 连接地址 | String | ' ' |
 |  onlyTapFooter | 是否只在点击右侧部分的时候跳转 | Boolean | false |
 
-#### Cell slots
+#### Cell-group slots
 
 |  name   |   说明  |
 | --- | --- |
 |  空（即默认） | 列表子项整体内容 |
 
-#### Cell-item slots
+#### Cell slots
 
 |  name   |   说明  |
 | --- | --- |
@@ -194,7 +194,7 @@
 |  icon | 左侧标题前面图标内容 |
 |  footer | 右侧内容 |
 
-#### Cell-item events
+#### Cell events
 
 |  事件名   |   说明  | 回调参数 |
 | --- | --- | --- |
@@ -325,8 +325,8 @@
 
 ```json
 "usingComponents": {
-    "d-collapse": "../../dist/collapse/index",
-    "d-collapse-item": "../../dist/collapse-item/index"
+    "d-collapse-group": "../../dist/collapse-group/index",
+    "d-collapse": "../../dist/collapse/index"
 }
 ```
 
@@ -334,83 +334,83 @@
 
 ```html
 <!-- 非手风琴模式 -->
-<d-collapse>
-    <d-collapse-item title="一致性">
+<d-collapse-group>
+    <d-collapse title="一致性">
         <view class="collapse-main">
         <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
         <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
         </view>
-    </d-collapse-item>
-    <d-collapse-item title="一致性一致性一致性一致性一致性一致性一致性一致性一致性">
+    </d-collapse>
+    <d-collapse title="一致性一致性一致性一致性一致性一致性一致性一致性一致性">
         <view class="collapse-main">
         <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
         <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
         </view>
-    </d-collapse-item>
-    <d-collapse-item title="一致性">
+    </d-collapse>
+    <d-collapse title="一致性">
         <view class="collapse-main">
         <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
         <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
         </view>
-    </d-collapse-item>
-</d-collapse>
+    </d-collapse>
+</d-collapse-group>
 
 <!-- 手风琴模式 -->
-<d-collapse accordion="{{true}}">
-    <d-collapse-item title="一致性">
+<d-collapse-group accordion="{{true}}">
+    <d-collapse title="一致性">
       <view class="collapse-main">
         <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
         <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
       </view>
-    </d-collapse-item>
-    <d-collapse-item title="一致性">
+    </d-collapse>
+    <d-collapse title="一致性">
       <view class="collapse-main">
         <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
         <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
       </view>
-    </d-collapse-item>
-    <d-collapse-item title="一致性">
+    </d-collapse>
+    <d-collapse title="一致性">
       <view class="collapse-main">
         <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
         <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
       </view>
-    </d-collapse-item>
-</d-collapse>
+    </d-collapse>
+</d-collapse-group>
 
 <!-- 不可编辑 -->
-<d-collapse>
-    <d-collapse-item title="一致性" disabled show>
+<d-collapse-group>
+    <d-collapse title="一致性" disabled show>
       <view class="collapse-main">
         <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
         <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
       </view>
-    </d-collapse-item>
-    <d-collapse-item title="一致性">
+    </d-collapse>
+    <d-collapse title="一致性">
       <view class="collapse-main">
         <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
         <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
       </view>
-    </d-collapse-item>
-    <d-collapse-item title="一致性">
+    </d-collapse>
+    <d-collapse title="一致性">
       <view class="collapse-main">
         <view>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</view>
         <view>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</view>
       </view>
-    </d-collapse-item>
-</d-collapse>
+    </d-collapse>
+</d-collapse-group>
 
 ```
 
 #### API
 
-##### Collapse properties
+##### Collapse-group properties
 
 |  属性   |   说明  |  类型  | 默认值 |
 | --- | --- |  --- |  --- |
 |  active | 当前展开的子项 | [String,Number] | ' ' |
 |  accordion | 是否是手风琴模式 | Boolean | false |
 
-##### Collapse-item properties
+##### Collapse properties
 
 |  属性   |   说明  |  类型  | 默认值 |
 | --- | --- |  --- |  --- |
@@ -419,26 +419,26 @@
 |  title | 组件头部显示文案 | String | ' ' |
 |  disabled | 组件是否不可变更展开状态 | Boolean | false |
 
-#### Collapse slots
+#### Collapse-group slots
 
 |  name   |   说明  |
 | --- | --- |
 |  空（即默认） | 子项整体 |
 
-#### Collapse-item slots
+#### Collapse slots
 
 |  name   |   说明  |
 | --- | --- |
 |  空（即默认） | 可展开内容 |
 |  title | 头部显示内容 |
 
-#### Collapse events
+#### Collapse-group events
 
 |  事件名   |   说明  | 回调参数 |
 | --- | --- | --- |
 |  change | 当前展开子项变更事件 | 无 |
 
-#### Collapse-item events
+#### Collapse events
 
 |  事件名   |   说明  | 回调参数 |
 | --- | --- | --- |

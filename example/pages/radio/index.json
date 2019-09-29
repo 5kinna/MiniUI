@@ -1,8 +1,9 @@
 {
-  
+
   "navigationBarTitleText": "",
-  
+
   "usingComponents": {
-    
+    "d-radio-group": "/dist/radio-group/index",
+    "d-radio": "/dist/radio/index"
   }
 }

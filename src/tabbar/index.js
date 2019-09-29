@@ -31,7 +31,6 @@ BaseComponent({
   },
   data: {
     activeKey: '',
-    keys: []
   },
   computed: {
     style: ['height,position', (height, position) => {
