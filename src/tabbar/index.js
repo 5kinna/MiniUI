@@ -7,10 +7,7 @@ import BaseComponent from '../utils/baseComponent'
 BaseComponent({
   relations: {
     '../tabbar-item/index': {
-      type: 'child',
-      linked(target) {
-        this.updated()
-      },
+      type: 'child'
     }
   },
   properties: {
@@ -24,13 +21,13 @@ BaseComponent({
       value: '98'
     },
     current: {
-      type: String,
+      type: [String, Number],
       value: '',
       observer: 'updated'
     }
   },
   data: {
-    activeKey: '',
+    activeKey: 0,
   },
   computed: {
     style: ['height,position', (height, position) => {
@@ -40,7 +37,7 @@ BaseComponent({
     }]
   },
   ready() {
-    this.updated(this.data.current || 0)
+    this.changeCurrent()
   },
   methods: {
     updated(activeKey = this.data.activeKey) {
@@ -50,10 +47,13 @@ BaseComponent({
         activeKey
       })
     },
-    changeCurrent(activeKey) {
+    changeCurrent(activeKey = this.data.activeKey) {
       const elements = this.getRelationNodes('../tabbar-item/index')
       if (elements.length > 0) {
-        elements.forEach((ele, index) => ele.changeCurrent(index === activeKey, index))
+        elements.forEach((ele, index) => {
+          const value = ele.data.value || index
+          ele.changeCurrent(value === activeKey, value)
+        })
       }
     },
     emitEvent(key) {
@@ -62,6 +62,7 @@ BaseComponent({
       })
     },
     setActiveTabbar(activeKey) {
+      if (this.data.activeKey === activeKey) return
       this.updated(activeKey)
       this.emitEvent(activeKey)
     }

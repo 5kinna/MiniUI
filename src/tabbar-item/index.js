@@ -13,6 +13,10 @@ BaseComponent({
     disabled: {
       type: Boolean,
       value: false
+    },
+    value: {
+      type: [String, Number],
+      value: ''
     }
   },
   data: {

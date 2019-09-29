@@ -31,7 +31,7 @@
   </d-tabbar>
 </view>
 <view class="tabbar-bottom" data-text="底部位置" style="bottom:{{ipx?110:50}}rpx">
-  <d-tabbar mini-clz="tabbar-wrap" height="98">
+  <d-tabbar mini-clz="tabbar-wrap" height="98" current="{{1}}">
     <d-tabbar-item label="菜单1">
       <d-icon type="home-selected" slot="on" color="#1aad19"></d-icon>
       <d-icon type="home" slot="off"></d-icon>
