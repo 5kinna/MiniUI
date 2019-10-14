@@ -1,0 +1,31 @@
+@import '../style/variable.scss';
+@import '../style/mixin.scss';
+.__popup {
+  position: fixed;
+  top: 100vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: $index-full-model;
+  transition: all .3s ease-in-out;
+  &.show {
+    top: 0;
+    .__popup-mask {
+      display: block;
+    }
+  }
+  &-mask,
+  &-main {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &-mask {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, .6);
+    display: none;
+  }
+}

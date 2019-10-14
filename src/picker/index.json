@@ -1,0 +1,10 @@
+{
+
+  "component": true,
+
+  "usingComponents": {
+    "d-popup": "../popup/index",
+    "d-loading": "../loading/index",
+    "d-input": "../input/index"
+  }
+}

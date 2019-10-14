@@ -7,7 +7,7 @@
   <view bind:tap="showHandle" class="btn" data-show="showWhite">点击全局加载</view>
 </view>
 <view class="item loading-part" data-text="局部加载" id="loadingPart">
-  <d-loading title="局部加载中" show="{{showPart}}" fullscreen="{{false}}" mask="white"></d-loading>
+  <d-loading title="局部加载中" show="{{showPart}}" fullscreen="{{false}}" mask="white" model="{{false}}"></d-loading>
   <view wx:for="{{8}}" wx:key="{{item}}">这是局部加载</view>
   <view bind:tap="showHandle" class="btn" data-show="showPart">点击局部加载</view>
 </view>

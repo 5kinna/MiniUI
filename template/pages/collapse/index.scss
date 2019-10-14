@@ -1,3 +1,4 @@
+@import '../style/mixin.scss';
 .item {
   margin-left: 0;
   margin-right: 0;
@@ -8,4 +9,8 @@
 
 .collapse-main {
   padding: 20rpx 30rpx;
+}
+
+.__collapse {
+  @include bline();
 }

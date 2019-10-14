@@ -1,0 +1,1 @@
+.item{margin-left:0;margin-right:0}.item::before{left:20rpx}.swiper{position:relative}.swiper::before{content:'';position:absolute;width:200%;height:200%;transform:scale(.5);transform-origin:0 0;pointer-events:none;box-sizing:border-box;border:0 solid #e0e0e0;z-index:999;left:0;right:0;top:0}.swiper::before{border-bottom-width:1px}.swiper-delete{background:red;color:#fff}

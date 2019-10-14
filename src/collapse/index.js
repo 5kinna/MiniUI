@@ -57,6 +57,5 @@ BaseComponent({
         index
       })
     }
-  },
-  ready() {}
+  }
 })

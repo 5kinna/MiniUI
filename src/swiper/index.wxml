@@ -1,0 +1,11 @@
+<movable-area class="__swiper mini-clz" style="{{clz.area}}">
+  <movable-view class="__swiper-view" out-of-bounds direction="horizontal" inertia animation disabled="{{disabled}}" x="{{xmove}}"
+    bind:touchstart="handleTouchStart" catch:touchend="handleTouchEnd" style="{{clz.view}}">
+    <view class="__swiper-main">
+      <slot></slot>
+    </view>
+    <view class="__swiper-right" style="{{clz.right}}">
+      <slot name="right"></slot>
+    </view>
+  </movable-view>
+</movable-area>

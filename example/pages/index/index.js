@@ -2,11 +2,9 @@ Page({
   data: {
     scrollTop: 0
   },
-  onPageScroll({
-    scrollTop
-  }) {
+  onPageScroll(e) {
     this.setData({
-      scrollTop
+      scrollTop: e.scrollTop
     })
   }
 })

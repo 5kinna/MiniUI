@@ -1,15 +1,22 @@
 @import '../style/variable.scss';
 .__sticky-item {
+  position: relative;
+  &-top {
+    height: 80rpx;
+    line-height: 80rpx;
+  }
   &-title {
     padding: 20rpx 40rpx;
     line-height: 40rpx;
   }
   &-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: $index-over;
-    background: $color-bg;
+    .__sticky-item-title {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: $index-over;
+      background: $color-bg;
+    }
   }
 }

@@ -1,4 +1,18 @@
-<!--index.wxml-->
-<view>
-index
+<view class="item" data-text="基本使用">
+  <block wx:for="{{20}}" wx:key="{{item}}">
+    <d-swiper mini-clz="swiper">
+      <view class="base">基本使用</view>
+      <view slot="right" class="swiper-delete">删除</view>
+    </d-swiper>
+  </block>
+</view>
+<view class="item" data-text="最多显示一个">
+  <d-swiper-group>
+    <block wx:for="{{20}}" wx:key="{{item}}">
+      <d-swiper mini-clz="swiper">
+        <view class="base">基本使用</view>
+        <view slot="right" class="swiper-delete">删除</view>
+      </d-swiper>
+    </block>
+  </d-swiper-group>
 </view>

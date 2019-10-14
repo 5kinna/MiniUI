@@ -1,0 +1,6 @@
+<view class="__popup {{isShow?'show':''}}">
+  <view class="__popup-mask" catch:tap="cancelModel"></view>
+  <view class="__popup-main">
+    <slot></slot>
+  </view>
+</view>

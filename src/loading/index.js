@@ -17,6 +17,10 @@ BaseComponent({
       type: String,
       value: 'none'
     },
+    model: {
+      type: Boolean,
+      value: true
+    },
     fullscreen: {
       type: Boolean,
       value: true

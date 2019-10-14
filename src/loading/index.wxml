@@ -1,5 +1,5 @@
-<view class="__loading __loading-{{mask}} {{fullscreen?'__loading-fullscreen':'__loading-part'}}" wx:if="{{show}}">
-  <view class="__loading-main">
+<view class="__loading __loading-{{mask}} {{fullscreen?'__loading-fullscreen':'__loading-part'}} mini-clz" wx:if="{{show}}">
+  <view class="__loading-main {{model?'model':''}}">
     <block>
       <view class="__loading-{{type}}" wx:if="{{type}}"></view>
       <slot wx:else name="type"></slot>

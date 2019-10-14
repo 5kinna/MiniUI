@@ -1,0 +1,29 @@
+@import '../style/variable.scss';
+.__noticebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  background: $color-primary;
+  padding: 0 40rpx;
+  &-left {
+    display: flex;
+    align-items: center;
+    width: 98%;
+    height: 100%;
+  }
+  &-icon {
+    margin-right: 20rpx;
+  }
+  &-main {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &-message {
+    font-size: 28rpx;
+    color: #fff;
+  }
+  &-right {
+    margin-left: 1%;
+  }
+}

@@ -1,7 +1,7 @@
 @import '../style/mixin.scss';
 .__cell {
-  padding: 32rpx 40rpx 30rpx;
-  background: #fff;
+  padding: 32rpx 40rpx 30rpx 0;
+  margin-left: 40rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,8 +34,5 @@
   }
   &-bline {
     @include bline();
-    &::before {
-      left: 40rpx;
-    }
   }
 }

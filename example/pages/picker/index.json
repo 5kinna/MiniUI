@@ -1,8 +1,9 @@
 {
-  
+
   "navigationBarTitleText": "",
-  
+
   "usingComponents": {
-    
+    "d-picker": "/dist/picker/index",
+    "d-input": "/dist/input/index"
   }
 }

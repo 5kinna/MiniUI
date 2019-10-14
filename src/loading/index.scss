@@ -23,7 +23,6 @@
     left: 50%;
     top: 30%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, .6);
     z-index: $index-full-over;
     min-width: 160rpx;
     min-height: 200rpx;
@@ -34,6 +33,9 @@
     justify-content: center;
     flex-direction: column;
     padding: 0 20rpx;
+    &.model {
+      background: rgba(0, 0, 0, .6);
+    }
   }
   &-title {
     font-size: 24rpx;

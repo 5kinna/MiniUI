@@ -1,0 +1,22 @@
+<view>
+  <view class="__picker-view" catch:tap="showPicker">
+    <block wx:if="{{useSlot}}">
+      <slot></slot>
+    </block>
+    <d-input wx:else placeholder="请选择" disabled value="{{value}}"></d-input>
+  </view>
+  <d-popup show="{{show}}">
+    <view class="__picker-container">
+      <view class="__picker-header">
+        <view catch:tap="cancelPicker">取消</view>
+        <view catch:tap="confirmPicker">确定</view>
+      </view>
+      <picker-view class="__picker-main" indicator-class="custom-picker" bindchange="changeHandle" value="{{value}}">
+        <d-loading show="{{loading}}" fullscreen="{{false}}" mask="white" model="{{false}}"></d-loading>
+        <picker-view-column wx:for="{{cols}}" wx:key="{{col}}" wx:for-item="col">
+          <view wx:for="{{ data }}" wx:key="{{index}}">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </d-popup>
+</view>

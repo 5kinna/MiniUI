@@ -1,8 +1,9 @@
 {
-  
+
   "navigationBarTitleText": "",
-  
+
   "usingComponents": {
-    
+    "d-swiper": "/dist/swiper/index",
+    "d-swiper-group": "/dist/swiper-group/index"
   }
 }

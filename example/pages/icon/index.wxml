@@ -4,3 +4,4 @@
 <d-icon type="left-full" data-text="left-full" class="item-icon" color="#7B8087"></d-icon>
 <d-icon type="right-full" data-text="right-full" class="item-icon" color="#7B8087"></d-icon>
 <d-icon type="delete" data-text="delete" class="item-icon" color="#7B8087"></d-icon>
+<d-icon type="notice" data-text="notice" class="item-icon" color="#7B8087"></d-icon>

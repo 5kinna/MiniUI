@@ -1,0 +1,40 @@
+@import './variable.scss';
+@mixin line($color:$color-boder) {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 0 solid $color;
+    z-index: $index-model;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+}
+
+@mixin tline($color:$color-boder) {
+  @include line($color);
+  &::before {
+    border-top-width: 1px;
+  }
+}
+
+@mixin bline($color:$color-boder) {
+  @include line($color);
+  &::before {
+    border-bottom-width: 1px;
+  }
+}
+
+@mixin lline($color:$color-boder) {
+  @include line($color);
+  &::before {
+    border-left-width: 1px;
+  }
+}

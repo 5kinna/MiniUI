@@ -9,7 +9,7 @@ BaseComponent({
   properties: {
     current: {
       type: Array,
-      value: '',
+      value: [],
       observer: 'updated'
     },
     title: {

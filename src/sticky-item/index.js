@@ -24,7 +24,7 @@ BaseComponent({
         height,
         isFixed
       } = this.data
-      const fixed = scrollTop > top && scrollTop < top + height
+      const fixed = scrollTop >= top && scrollTop < top + height
       if (isFixed === fixed) return
       this.setData({
         isFixed: fixed

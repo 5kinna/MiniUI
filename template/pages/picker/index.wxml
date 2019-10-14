@@ -1,4 +1,6 @@
-<!--index.wxml-->
-<view>
-index
+<view class="item" data-text="基础用法">
+  <d-picker data="{{baseData}}" value="{{baseValue}}" mode="default"></d-picker>
+</view>
+<view class="item" data-text="多列选择">
+  <d-picker data="{{multyData}}" value="{{multyValue}}" mode="default"></d-picker>
 </view>

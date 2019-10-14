@@ -1,0 +1,45 @@
+@import '../style/mixin.scss';
+@import '../style/variable.scss';
+.__picker {
+  &-container {
+    background: #fff;
+  }
+  &-header {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    box-sizing: border-box;
+    @include bline(#eee);
+    view {
+      padding: 10px;
+      &+view {
+        color: $color-primary;
+      }
+    }
+  }
+  &-main {
+    height: 600rpx;
+    text-align: center;
+    line-height: 80rpx;
+    position: relative;
+  }
+  &-loading {
+    .__loading-main {
+      top: 20%;
+      min-height: 164rpx;
+      min-width: 140rpx;
+      .__loading-title {
+        height: 40rpx;
+        line-height: 40rpx;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.custom-picker {
+  width: 100%;
+  height: 80rpx;
+  box-sizing: border-box;
+}
