@@ -1,9 +1,13 @@
 <view class="item" data-text="基本用法">
-  <d-noticebar message="正在飘过一则基本用法~~~正在飘过一则基本用法~~~正在飘过一则基本用法~~~"></d-noticebar>
+  <d-noticebar>
+    正在飘过一则基本用法~~~正在飘过一则基本用法~~~正在飘过一则基本用法~~~
+  </d-noticebar>
 </view>
 <view class="item" data-text="删除提示">
-  <d-noticebar message="正在飘过一则随心情被删除提示~~~正在飘过一则随心情被删除提示~~~" closable></d-noticebar>
+  <d-noticebar closable loop>
+    正在飘过一则随心情被删除提示~~~正在飘过一则随心情被删除提示~~~
+  </d-noticebar>
 </view>
 <view class="item" data-text="快速提示">
-  <d-noticebar message="正在飘过一则快速提示~~~正在飘过一则快速提示提示~~~" closable speed="{{300}}"></d-noticebar>
+  <d-noticebar message="正在飘过一则快速提示~~~正在飘过一则快速提示提示~~~正在飘过一则快速提示提示~~~" closable speed="{{300}}" loop></d-noticebar>
 </view>

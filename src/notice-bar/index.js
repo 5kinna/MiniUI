@@ -34,7 +34,9 @@ BaseComponent({
     active: ['show', show => show]
   },
   ready() {
-    this.initAnimation()
+    if (this.data.loop) {
+      this.initAnimation()
+    }
   },
   methods: {
     hideHandle() {
@@ -43,23 +45,37 @@ BaseComponent({
       })
     },
     initAnimation() {
-      const {
-        loop,
-        speed
-      } = this.data
       const query = wx.createSelectorQuery().in(this)
+      query.select(`.__noticebar-main`).boundingClientRect()
       query.select(`.__noticebar-content`).boundingClientRect()
-      query.select(`.__noticebar-message`).boundingClientRect()
       query.exec(([content, message]) => {
-        console.log(content.width, message.width)
+        this.duration = message.width / this.data.speed * 1000
+
         this.animation = wx.createAnimation({
-          duration: message.width / this.data.speed * 1000,
-        })
-        this.animation.translateX(-message.width).step()
-        this.setData({
-          animation: this.animation.export()
-        })
+          duration: this.duration,
+        }).translateX(-message.width).step().export()
+
+        this.reAnimation = wx.createAnimation({
+          duration: 0,
+        }).translateX(content.width).step().export()
+
+        this.resetAnimation()
       })
+    },
+    resetAnimation() {
+      this.timer && clearTimeout(this.timer)
+      this.timer = null
+
+      this.setData({
+        animation: this.reAnimation
+      });
+      setTimeout(() => {
+        this.setData({
+          animation: this.animation
+        })
+      }, 20)
+
+      this.timer = setTimeout(this.resetAnimation.bind(this), this.duration)
     }
   }
 })

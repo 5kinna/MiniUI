@@ -1,14 +1,12 @@
 <view class="__noticebar" wx:if="{{active}}">
-  <view class="__noticebar-left">
-    <view class="__noticebar-icon">
-      <d-icon type="{{icon}}" wx:if="{{icon}}" color="#fff" size="32"></d-icon>
-      <slot name="left" wx:else></slot>
-    </view>
-    <view class="__noticebar-main">
-      <view class="__noticebar-content" animation="{{animation}}">
-        <view wx:if="{{message}}" class="__noticebar-message">{{message}}</view>
-        <slot wx:else></slot>
-      </view>
+  <view class="__noticebar-icon">
+    <d-icon type="{{icon}}" wx:if="{{icon}}" color="#fff" size="32"></d-icon>
+    <slot name="left" wx:else></slot>
+  </view>
+  <view class="__noticebar-main">
+    <view class="__noticebar-content {{loop?'__noticebar-loop':''}}" animation="{{animation}}">
+      <block wx:if="{{message}}">{{message}}</block>
+      <slot wx:else></slot>
     </view>
   </view>
   <view class="__noticebar-right">

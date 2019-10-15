@@ -6,7 +6,7 @@
     </d-swiper>
   </block>
 </view>
-<view class="item" data-text="最多显示一个">
+<!-- <view class="item" data-text="最多显示一个">
   <d-swiper-group>
     <block wx:for="{{20}}" wx:key="{{item}}">
       <d-swiper mini-clz="swiper">
@@ -15,4 +15,4 @@
       </d-swiper>
     </block>
   </d-swiper-group>
-</view>
+</view> -->
