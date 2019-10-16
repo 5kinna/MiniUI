@@ -1,0 +1,12 @@
+<scroll-view wx:if="{{ scroll }}" scroll-x class="__tabs __tabs-scroll">
+  <slot></slot>
+</scroll-view>
+<view wx:else class="__tabs">
+  <slot></slot>
+</view>
+<swiper current="{{ activeKey }}" bindchange="onSwiperChange" class="__tabs-content">
+  <swiper-item wx:for="{{ tabNumber }}" wx:key="{{index}}" skip-hidden-item-layout>
+    <slot name="tab-{{index}}"></slot>
+  </swiper-item>
+</swiper>
+<slot name="content"></slot>

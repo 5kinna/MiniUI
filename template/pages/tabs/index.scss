@@ -1,0 +1,7 @@
+.item {
+  margin-left: 0;
+  margin-right: 0;
+  &::before {
+    left: 20rpx;
+  }
+}

@@ -1,0 +1,13 @@
+@import '../style/mixin.scss';
+.__tabs {
+  display: block;
+  height: 96rpx;
+  @include bline();
+  &-content {
+    padding: 20rpx 40rpx;
+  }
+  &-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

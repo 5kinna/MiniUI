@@ -1,0 +1,6 @@
+<view class="__tab {{current?'__tab-title-active':''}}" catch:tap="tabChangeHandle" style="width:{{width}};">
+  <view class="__tab-title">
+    <block wx:if="{{label}}">{{label}}</block>
+    <slot wx:else></slot>
+  </view>
+</view>

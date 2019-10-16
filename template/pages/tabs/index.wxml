@@ -1,4 +1,31 @@
-<!--index.wxml-->
-<view>
-index
+<view class="item" data-text="基础用法">
+  <d-tabs bind:change="changeHandle">
+    <d-tab label="菜单{{index+1}}" wx:for="{{4}}" wx:key="{{index}}"></d-tab>
+    <view wx:for="{{4}}" slot="tab-{{index}}" wx:key="{{index}}">菜单{{index+1}}内容</view>
+  </d-tabs>
+</view>
+<view class="item" data-text="滚动">
+  <d-tabs bind:change="changeHandle" scroll>
+    <d-tab label="菜单{{index+1}}" wx:for="{{10}}" wx:key="{{index}}"></d-tab>
+    <view wx:for="{{10}}" slot="tab-{{index}}" wx:key="{{index}}">菜单{{index+1}}内容</view>
+  </d-tabs>
+</view>
+<view class="item" data-text="自定义">
+  <d-tabs bind:change="changeHandle">
+    <d-tab>
+      <d-badge count="5">
+        <view>菜单1</view>
+      </d-badge>
+    </d-tab>
+    <d-tab>
+      <d-badge dot>
+        <view>菜单2</view>
+      </d-badge>
+    </d-tab>
+    <d-tab label="菜单3"></d-tab>
+    <d-tab>
+      <view style="color:aquamarine;">菜单4</view>
+    </d-tab>
+    <view wx:for="{{4}}" slot="tab-{{index}}" wx:key="{{index}}">菜单{{index+1}}内容</view>
+  </d-tabs>
 </view>

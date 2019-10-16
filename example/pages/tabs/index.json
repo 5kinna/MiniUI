@@ -1,8 +1,10 @@
 {
-  
+
   "navigationBarTitleText": "",
-  
+
   "usingComponents": {
-    
+    "d-tabs": "/dist/tabs/index",
+    "d-tab": "/dist/tab/index",
+    "d-badge": "/dist/badge/index"
   }
 }
