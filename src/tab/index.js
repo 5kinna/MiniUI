@@ -11,10 +11,6 @@ BaseComponent({
       type: String,
       value: ''
     },
-    disabled: {
-      type: Boolean,
-      value: false
-    },
     active: {
       type: Boolean,
       value: false

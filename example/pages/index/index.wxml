@@ -1,12 +1,12 @@
 <d-sticky scrollTop="{{scrollTop}}">
   <d-sticky-item title="基础组件">
-    <d-cell-group title="">
+    <d-cell-group>
       <d-cell title="Image图片" isLink url="../image/index"></d-cell>
       <d-cell title="Icon图标" isLink url="../icon/index"></d-cell>
     </d-cell-group>
   </d-sticky-item>
   <d-sticky-item title="表单组件">
-    <d-cell-group title="">
+    <d-cell-group>
       <d-cell title="Input输入框" isLink url="../input/index"></d-cell>
       <d-cell title="Radio单选" isLink url="../radio/index"></d-cell>
       <d-cell title="Checkbox单选" isLink url="../checkbox/index"></d-cell>
@@ -14,7 +14,7 @@
     </d-cell-group>
   </d-sticky-item>
   <d-sticky-item title="导航组件">
-    <d-cell-group title="">
+    <d-cell-group>
       <d-cell title="TabBar标签栏" isLink url="../tabbar/index"></d-cell>
       <d-cell title="Tabs标签页" isLink url="../tabs/index"></d-cell>
       <d-cell title="NoticeBar通告栏" isLink url="../noticebar/index"></d-cell>
@@ -22,14 +22,14 @@
     </d-cell-group>
   </d-sticky-item>
   <d-sticky-item title="反馈组件">
-    <d-cell-group title="">
+    <d-cell-group>
       <d-cell title="Model对话框" isLink url="../model/index"></d-cell>
       <d-cell title="Loading加载中" isLink url="../loading/index"></d-cell>
       <d-cell title="Swiper滑动菜单" isLink url="../swiper/index"></d-cell>
     </d-cell-group>
   </d-sticky-item>
   <d-sticky-item title="视图组件">
-    <d-cell-group title="">
+    <d-cell-group>
       <d-cell title="Badge徽章" isLink url="../badge/index"></d-cell>
       <d-cell title="Tag标签" isLink url="../tag/index"></d-cell>
       <d-cell title="Collapse折叠面板" isLink url="../collapse/index"></d-cell>

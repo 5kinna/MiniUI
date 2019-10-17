@@ -1,0 +1,33 @@
+@import '../style/variable.scss';
+.__index {
+  &-side {
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    right: 0;
+    z-index: $index-over;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &-item {
+      font-size: 24rpx;
+      padding: 0 20rpx;
+    }
+  }
+  &-tip {
+    position: fixed;
+    width: 100rpx;
+    height: 100rpx;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    text-align: center;
+    line-height: 100rpx;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 40rpx;
+    z-index: $index-over;
+  }
+}

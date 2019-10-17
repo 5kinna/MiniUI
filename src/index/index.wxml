@@ -1,0 +1,9 @@
+<scroll-view class="__index" scroll-y scroll-top="{{scrollTop}}" style="{{indexStyle}}">
+  <block>
+    <slot></slot>
+  </block>
+  <view class="__index-side" catchtouchstart="sideStartHandle" catchtouchmove="sideMoveHandle" catchtouchend="sideEndHandle">
+    <view wx:for="{{datas}}" wx:key="{{index}}" class="__index-side-item" data-title="{{item.title}}" data-index="{{index}}">{{item.title}}</view>
+  </view>
+  <view class="__index-tip" wx:if="{{isTouched}}">{{currentName}}</view>
+</scroll-view>

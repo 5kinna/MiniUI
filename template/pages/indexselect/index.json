@@ -1,0 +1,9 @@
+{
+
+  "navigationBarTitleText": "",
+
+  "usingComponents": {
+    "d-index": "/dist/index/index",
+    "d-index-item": "/dist/index-item/index"
+  }
+}

@@ -1,0 +1,5 @@
+<d-index height="100vh">
+  <d-index-item title="{{item.title}}" wx:for="{{list}}" wx:key="{{index}}">
+    <view wx:for="{{item.content}}" wx:key="{{i}}" wx:for-index="i" wx:for-item="j" class="index-select-item">{{j}}</view>
+  </d-index-item>
+</d-index>

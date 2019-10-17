@@ -1,0 +1,14 @@
+@import '../style/variable.scss';
+.__index-item {
+  &-title {
+    height: 50rpx;
+    line-height: 50rpx;
+    padding-left: 20rpx;
+    background-color: $color-bg;
+    color: $color-font-primary;
+    font-size: $size-font-primary;
+  }
+  &-content {
+    background-color: $color-fullbg;
+  }
+}

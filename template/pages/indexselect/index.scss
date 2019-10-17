@@ -1,0 +1,8 @@
+@import '../style/mixin.scss';
+.index-select-item {
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 36rpx;
+  padding: 0 20rpx;
+  @include bline()
+}

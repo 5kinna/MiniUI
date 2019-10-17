@@ -1,0 +1,6 @@
+<view class="__index-item">
+  <view class="__index-item-title">{{title}}</view>
+  <view class="__index-item-content">
+    <slot></slot>
+  </view>
+</view>
